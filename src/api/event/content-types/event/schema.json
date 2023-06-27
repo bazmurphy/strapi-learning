@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventTitle": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3
+    },
+    "eventDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "eventImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "eventCategory": {
+      "type": "enumeration",
+      "enum": [
+        "Fundraising",
+        "Awareness",
+        "Community Outreach"
+      ],
+      "required": true
+    },
+    "eventDescription": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

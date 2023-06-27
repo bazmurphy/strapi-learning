@@ -1,0 +1,33 @@
+{
+  "name": "strapi-learning",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^2.0.4",
+    "@strapi/plugin-documentation": "^4.11.2",
+    "@strapi/plugin-i18n": "4.11.2",
+    "@strapi/plugin-users-permissions": "4.11.2",
+    "@strapi/provider-upload-cloudinary": "^4.11.2",
+    "@strapi/strapi": "4.11.2",
+    "pg": "8.8.0",
+    "strapi-plugin-multi-select": "^1.1.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "18d30aba-4e3a-4ddf-84b1-360ac663895e"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
