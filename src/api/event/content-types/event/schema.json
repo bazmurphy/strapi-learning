@@ -8,21 +8,21 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "eventTitle": {
+    "title": {
       "type": "string",
       "required": true,
       "unique": true,
       "minLength": 3
     },
-    "eventDate": {
+    "date": {
       "type": "datetime",
       "required": true
     },
-    "eventImage": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -33,7 +33,7 @@
         "audios"
       ]
     },
-    "eventCategory": {
+    "category": {
       "type": "enumeration",
       "enum": [
         "Fundraising",
@@ -42,12 +42,22 @@
       ],
       "required": true
     },
-    "eventDescription": {
+    "description": {
       "type": "customField",
       "options": {
         "preset": "toolbar"
       },
-      "customField": "plugin::ckeditor5.CKEditor"
+      "customField": "plugin::ckeditor5.CKEditor",
+      "required": true
+    },
+    "summary": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar",
+        "maxLengthCharacters": 300
+      },
+      "customField": "plugin::ckeditor5.CKEditor",
+      "required": true
     }
   }
 }
